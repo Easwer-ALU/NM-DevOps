@@ -34,8 +34,8 @@ pipeline {
        stage('Deploy') {
            steps {
                echo 'Deploying....'
-               sh 'minikube delete'
-               sh 'rm -rf ~/.minikube'
+               //sh 'minikube delete'
+               //sh 'rm -rf ~/.minikube'
                sh 'minikube start'
                sh 'minikube kubectl -- apply -f deployment.yaml'
                sh 'minikube kubectl -- apply -f service.yaml'
